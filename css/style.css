@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(167, 63, 153);
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+}
+
+.header {
+    text-align: center;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hangman-area {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 3px;
+    stroke-linecap: round;
+}
+
+.body-parts { display: none; }
+
+.wrong-letters { font-size: 24px; margin-left: 42px;}
+
+.wrong-letters span { margin: 2px 2px; }
+
+.secret-word { 
+    font-size: 30px;
+    min-width: 285px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.secret-word span { margin: 0 5px; }
+
+main {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.repeated-letter {
+    background-color: rgba(233, 233, 233, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -55px;
+    transition: transform 0.3s ease-in-out;
+    color: #ffd900;
+}
+
+.repeated-letter.show { transform: translateY(-50px); }
+
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.849);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background: #2980b9;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.popup button {
+    cursor: pointer;
+    background-color: #fff;
+    border: solid #fff;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+@media (max-width: 800px){
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 25px;
+    }
+    .game-area {
+        flex-direction: column;
+        margin-top: 25px;
+        align-items: center;
+    }
+    .secret-word { margin-top: 25px; }
+    .wrong-letters { margin-left: 0; }
+}
