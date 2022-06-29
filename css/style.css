@@ -1,3 +1,9 @@
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -90,9 +96,13 @@ main {
     font-size: 16px;
 }
 
+.category {
+    text-align: center;
+}
+
 .field {
     margin: 25px 0 20px 0;
-    max-width: 350px;
+    width: 300px;
 }
 
 @media (min-width: 1700px) { html { zoom: 1.6 } }
@@ -103,7 +113,6 @@ main {
     main {
         display: flex;
         flex-direction: column;
-        margin-top: 25px;
     }
     .game-area {
         flex-direction: column;
@@ -115,3 +124,5 @@ main {
     .wrong-letters { margin: 20px 0; }
     .category { margin: -10px 0 20px 0; }
 }
+
+@media (max-width: 340px){ .field { width: 280px; } }
