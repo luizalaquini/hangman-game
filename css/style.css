@@ -113,5 +113,5 @@ main {
     }
     .secret-word { margin: 10px 0; }
     .wrong-letters { margin: 20px 0; }
-    .category { margin: 20px 0; }
+    .category { margin: -10px 0 20px 0; }
 }

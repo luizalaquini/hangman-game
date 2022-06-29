@@ -1,7 +1,8 @@
 const words = {
     Fruta: ['melancia', 'jaca', 'jabuticaba', 'amora', 'caqui', 'cereja', 'framboesa', 'jambo', 'pitaya', 'roma', 'carambola', 'guarana', 'damasco', 'manga', 'pessego', 'abacaxi'],
-    País: [ 'italia', 'moçambique', 'suiça', 'equador', 'peru', 'paraguai', 'ucrania', 'romenia', 'bulgaria', 'costa rica', 'inglaterra', 'nigeria', 'gana', 'marrocos', 'senegal', 'etiopia', 'uganda', 'madagascar', 'jamaica', 'camaroes', 'angola', 'tailandia', 'islandia' ],
+    País: [ 'italia', 'moçambique', 'suiça', 'equador', 'peru', 'paraguai', 'ucrania', 'romenia', 'bulgaria', 'costa rica', 'inglaterra', 'nigeria', 'gana', 'marrocos', 'senegal', 'etiopia', 'uganda', 'madagascar', 'jamaica', 'camaroes', 'angola', 'tailandia', 'islandia', 'cabo verde', 'costa do marfim', 'nova zelandia'],
     Animal: [ 'gato', 'cachorro', 'leão', 'tigre', 'macaco', 'cavalo', 'cobra', 'tartaruga', 'jacaré', 'girafa', 'lobo', 'cavalo', 'gato', 'cachorro', 'leão', 'tigre', 'macaco', 'cavalo', 'cobra', 'tartaruga', 'jacaré', 'girafa', 'lobo', 'anta', 'jaguar', 'puma',  'lince', 'javali', 'esperança', 'barata', 'grilo', 'girino'],
+    Personagem: ['pernalonga', 'patolino', 'piu-piu', 'frajola', 'tom', 'jerry', 'shrek', "fiona", "encantado", 'pica-pau', 'zeca urubu', 'leoncio', 'ze colmeia', 'catatau', 'bob esponja', 'patrick', 'lula molusco', 'sandy bochechas', 'sr sirigueijo', 'plankton', 'sra puff', 'gary', 'nemo', 'dory', 'aladdin', 'abu', 'jasmin', 'jafar', 'cinderela', 'braca de neve', 'pinoquio', 'pluto', 'pato donald', 'mickey', 'pateta', 'kronk', 'cruella']
 }
 
 const category = Object.keys(words)[Math.floor(Math.random() * Object.keys(words).length)];
@@ -12,8 +13,9 @@ const rightLetters = [];
 const wrongLetters = [];
 
 document.addEventListener("keypress", (event) => {
-    const code = event.key.toLowerCase; // alfabeto
-    if (isLetra(code)) {
+    const entry = event.key;
+    if (isEnter(entry)){ /*do nothing*/ }
+    else if (isLetter(entry)) {
         const letter = event.key.toLowerCase();
         if (wrongLetters.includes(letter) || rightLetters.includes(letter)) {
             showWarningRepeatedLetter();
@@ -43,7 +45,7 @@ function showCategory() {
 
 function showWrongLetters() {
     const div = document.querySelector(".wrong-letters");
-    div.innerHTML = "<h4>Letras Erradas</h4>";
+    div.innerHTML = "<h4>Letras Erradas:</h4>";
     wrongLetters.forEach((letter) => {
         div.innerHTML += `<span>${letter}</span>`;
     });
@@ -56,11 +58,16 @@ function showRightLetters() {
         if (rightLetters.includes(letra)) {
             container.innerHTML += `<span>${letra}</span>`;
         } else {
-            container.innerHTML += letra !== " " ? `<span>_</span>` : `<span> </span>`;
+            if(letra === " "){
+                container.innerHTML += `<span> </span>`;
+            } else if (letra === "-"){
+                container.innerHTML += `<span>-</span>`;
+            } else {
+                container.innerHTML += `<span>_</span>`;
+            }
         }
     });
 }
-
 
 function showWarningRepeatedLetter() {
     const div = document.querySelector(".repeated-letter");
@@ -97,8 +104,12 @@ function drawHangman() {
     }
 }
 
-function isLetra(input) {
-    return input >= 'a' && input <= 'z' || input === 'ç';
+function isLetter(input) {
+    return input >= 'a' && input <= 'z' || input >= 'A' && input <= 'Z' || input === 'ç' || input === 'Ç';
+}
+
+function isEnter(input) {
+    return input === 'Enter';
 }
 
 function reiniciarJogo() {
