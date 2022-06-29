@@ -20,14 +20,14 @@
     </head>
 
     <body class="container-fluid" onload="updateGame()">
-        <div class="header mt-2 mb-4">
-            <h1>Jogo da Forca</h1>
-            <h6>Por: Luiza Batista Laquini</h6>
+        <div class="top">
+            <h1 class="hangman-game">Jogo da Forca</h1>
+            <h4 class="byLuiza">Por: Luiza Batista Laquini</h4>
         </div>
         <main>
             <div class="game-area">
                 <div class="svg-container">
-                    <svg height="250" width="200" class="hangman-area">
+                    <svg height="250" width="162" class="hangman-area">
                         <!-- forca -->
                         <line x1="60" y1="20" x2="140" y2="20" />
                         <line x1="140" y1="20" x2="140" y2="50" />
@@ -49,19 +49,17 @@
 
                 <div class="secret-word"></div>
 
-                <div class="wrong-letters">
-                    <h5>Letras Erradas</h5>
-                </div>
+                <div class="wrong-letters"></div>
             </div>
 
-            <div class="category">
-                <h3>Categoria:</h3>
+            <div class="bottom">
+                <div class="category"></div>
+
+                <textarea class="field form-control" placeholder="Se estiver no celular ou tablet, use esse campo para digitar."></textarea>
+
+                <div class="repeated-letter"></div>
             </div>
         </main>
-            
-        <div class="repeated-letter">
-            Você já usou essa letra!
-        </div>
 
         <div class="popup-container">
             <div class="popup">

@@ -38,12 +38,12 @@ function updateGame() {
 
 function showCategory() {
     const div = document.querySelector('.category');
-    div.innerHTML = `<h4>Categoria: ${category}</h4>`;
+    div.innerHTML = `<h2>Categoria: ${category}</h2>`;
 }
 
 function showWrongLetters() {
     const div = document.querySelector(".wrong-letters");
-    div.innerHTML = "<h5>Letras Erradas</h5>";
+    div.innerHTML = "<h4>Letras Erradas</h4>";
     wrongLetters.forEach((letter) => {
         div.innerHTML += `<span>${letter}</span>`;
     });
@@ -59,6 +59,15 @@ function showRightLetters() {
             container.innerHTML += letra !== " " ? `<span>_</span>` : `<span> </span>`;
         }
     });
+}
+
+
+function showWarningRepeatedLetter() {
+    const div = document.querySelector(".repeated-letter");
+    div.innerHTML = "<h4>Letra já utilizada!</h4>";
+    setTimeout(function(){
+        div.innerHTML = "";
+    },4000);
 }
 
 function checkGameStatus() {
@@ -86,14 +95,6 @@ function drawHangman() {
     for (let i = 0; i < wrongLetters.length; i++) {
         partesCorpo[i].style.display = "block";
     }
-}
-
-function showWarningRepeatedLetter() {
-    const aviso = document.querySelector(".repeated-letter");
-    aviso.classList.add("show");
-    setTimeout(() => {
-        aviso.classList.remove("show");
-    }, 4000);
 }
 
 function isLetra(codigo) {

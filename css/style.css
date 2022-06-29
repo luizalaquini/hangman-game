@@ -2,14 +2,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     background-color: rgb(167, 63, 153);
     color: #fff;
     font-family: "Quicksand", sans-serif;
 }
 
-.header {
-    text-align: center;
+.top {
+    margin: 20px 0; 
+    text-align: center; 
+}
+
+.hangman-game { 
+    font-weight: 400; 
+    letter-spacing: 0.1em;
+}
+
+.byLuiza {
+    font-weight: 200;
+    letter-spacing: 0.1em;
 }
 
 .game-area {
@@ -28,17 +40,15 @@ body {
 
 .body-parts { display: none; }
 
-.wrong-letters { font-size: 24px; margin-left: 42px;}
-
-.wrong-letters span { margin: 2px 2px; }
+.wrong-letters {margin-top: 16px;}
+.wrong-letters span { margin: 2px 2px; font-size: 30px;}
 
 .secret-word { 
-    font-size: 30px;
-    min-width: 285px;
+    font-size: 45px;
+    min-width: 500px;
     text-align: center;
     margin-top: 80px;
 }
-
 .secret-word span { margin: 0 5px; }
 
 main {
@@ -48,24 +58,14 @@ main {
 }
 
 .repeated-letter {
-    background-color: rgba(233, 233, 233, 0.3);
-    border-radius: 10px 10px 0 0;
-    padding: 15px 20px;
-    position: absolute;
-    bottom: -55px;
-    transition: transform 0.3s ease-in-out;
-    color: #ffd900;
+    text-align: center;
+    color: #000000;
 }
-
-.repeated-letter.show { transform: translateY(-50px); }
 
 .popup-container {
     background-color: rgba(0, 0, 0, 0.849);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: fixed; 
+    top: 0; bottom: 0; left: 0; right: 0;
     /* display: flex; */
     display: none;
     align-items: center;
@@ -90,7 +90,16 @@ main {
     font-size: 16px;
 }
 
-@media (max-width: 800px){
+.field {
+    margin: 25px 0 20px 0;
+    max-width: 350px;
+}
+
+@media (min-width: 1700px) { html { zoom: 1.6 } }
+
+@media (min-width: 1300px) { html { zoom: 1.2 } }
+
+@media (max-width: 950px){
     main {
         display: flex;
         flex-direction: column-reverse;
@@ -101,6 +110,6 @@ main {
         margin-top: 25px;
         align-items: center;
     }
-    .secret-word { margin-top: 25px; }
+    .secret-word { margin-top: 15px; }
     .wrong-letters { margin-left: 0; }
 }
