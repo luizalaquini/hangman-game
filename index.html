@@ -19,34 +19,33 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
 
-    <body class="container-fluid" onload="updateGame()">
+    <body class="container" onload="updateGame()">
         <div class="top">
-            <h1 class="hangman-game">Jogo da Forca</h1>
-            <h4 class="byLuiza">Por: Luiza Batista Laquini</h4>
+            <h1>Jogo da Forca</h1>
+            <h4>Por: Luiza Batista Laquini</h4>
         </div>
         <main>
             <div class="game-area">
-                <div class="svg-container">
-                    <svg height="250" width="162" class="hangman-area">
-                        <!-- forca -->
-                        <line x1="60" y1="20" x2="140" y2="20" />
-                        <line x1="140" y1="20" x2="140" y2="50" />
-                        <line x1="60" y1="20" x2="60" y2="230" />
-                        <line x1="20" y1="230" x2="100" y2="230" />
+                
+                <svg height="250" width="162" class="hangman">
+                    <!-- forca -->
+                    <line x1="60" y1="20" x2="140" y2="20" />
+                    <line x1="140" y1="20" x2="140" y2="50" />
+                    <line x1="60" y1="20" x2="60" y2="230" />
+                    <line x1="20" y1="230" x2="100" y2="230" />
 
-                        <!-- cabeça -->
-                        <circle cx="140" cy="70" r="20" class="body-parts" />
-                        <!-- corpo -->
-                        <line x1="140" y1="90" x2="140" y2="150" class="body-parts" />
-                        <!-- braços -->
-                        <line x1="140" y1="120" x2="120" y2="100" class="body-parts" />
-                        <line x1="140" y1="120" x2="160" y2="100" class="body-parts" />
-                        <!-- pernas -->
-                        <line x1="140" y1="150" x2="120" y2="180" class="body-parts" />
-                        <line x1="140" y1="150" x2="160" y2="180" class="body-parts" />
-                    </svg>
-                </div>
-
+                    <!-- cabeça -->
+                    <circle cx="140" cy="70" r="20" class="body-parts" />
+                    <!-- corpo -->
+                    <line x1="140" y1="90" x2="140" y2="150" class="body-parts" />
+                    <!-- braços -->
+                    <line x1="140" y1="120" x2="120" y2="100" class="body-parts" />
+                    <line x1="140" y1="120" x2="160" y2="100" class="body-parts" />
+                    <!-- pernas -->
+                    <line x1="140" y1="150" x2="120" y2="180" class="body-parts" />
+                    <line x1="140" y1="150" x2="160" y2="180" class="body-parts" />
+                </svg>
+                
                 <div class="secret-word"></div>
 
                 <div class="wrong-letters"></div>
@@ -54,16 +53,14 @@
 
             <div class="bottom">
                 <div class="category"></div>
-
-                <textarea class="field form-control" placeholder="Se estiver no celular ou tablet, use esse campo para digitar."></textarea>
-
+                <textarea class="field form-control" placeholder="Se estiver no celular ou tablet, use este campo para digitar."></textarea>
                 <div class="repeated-letter"></div>
             </div>
         </main>
 
         <div class="popup-container">
             <div class="popup">
-                <h2 id="message"></h2>
+                <h1 id="message"></h1>
                 <button id="btn btn-play" onclick="reiniciarJogo()">Jogar novamente</button>
             </div>
         </div>

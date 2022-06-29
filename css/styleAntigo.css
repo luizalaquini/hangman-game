@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(167, 63, 153);
+    color: #fff;
+    font-family: "Quicksand", sans-serif;
+}
+
+.top {
+    margin: 20px 0; 
+    text-align: center; 
+}
+
+.hangman-game { 
+    font-weight: 400; 
+    letter-spacing: 0.1em;
+}
+
+.byLuiza {
+    font-weight: 200;
+    letter-spacing: 0.1em;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hangman-area {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 3px;
+    stroke-linecap: round;
+}
+
+.body-parts { display: none; }
+
+.wrong-letters {margin-top: 16px;}
+.wrong-letters span { margin: 2px 2px; font-size: 30px;}
+
+.secret-word { 
+    font-size: 45px;
+    /*min-width: 500px;*/
+    text-align: center;
+    margin-top: 80px;
+}
+.secret-word span { margin: 0 5px; }
+
+main {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.repeated-letter {
+    text-align: center;
+    color: #000000;
+}
+
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.849);
+    position: fixed; 
+    top: 0; bottom: 0; left: 0; right: 0;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background: #2980b9;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.popup button {
+    cursor: pointer;
+    background-color: #fff;
+    border: solid #fff;
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+.category { text-align: center; }
+
+.field {
+    margin: 25px 0 20px 0;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrong-letters, .category { font-weight: 300; }
+
+@media (min-width: 1700px) { html { zoom: 1.6 } }
+
+@media (min-width: 1300px) { html { zoom: 1.2 } }
+
+@media (max-width: 950px){
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .game-area {
+        flex-direction: column;
+        margin-top: 25px;
+        gap: 0;
+        align-items: center;
+    }
+    .secret-word { margin: 10px 0; }
+    .wrong-letters { margin: 20px 0; }
+    .category { margin: -10px 0 20px 0; }
+}
+
+@media (max-width: 550px){
+    .secret-word { min-width: none; font-size: 30px;}
+}
+
+@media (max-width: 340px){ .field { width: 90%; } }
