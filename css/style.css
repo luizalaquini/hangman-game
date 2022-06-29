@@ -102,14 +102,16 @@ main {
 @media (max-width: 950px){
     main {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         margin-top: 25px;
     }
     .game-area {
         flex-direction: column;
         margin-top: 25px;
+        gap: 0;
         align-items: center;
     }
-    .secret-word { margin-top: 15px; }
-    .wrong-letters { margin-left: 0; }
+    .secret-word { margin: 10px 0; }
+    .wrong-letters { margin: 20px 0; }
+    .category { margin: 20px 0; }
 }

@@ -11,10 +11,10 @@ const secretWord = words[category][Math.floor(Math.random() * words[category].le
 const rightLetters = [];
 const wrongLetters = [];
 
-document.addEventListener("keypress", (evento) => {
-    const code = evento.key.toLowerCase; // alfabeto
+document.addEventListener("keypress", (event) => {
+    const code = event.key.toLowerCase; // alfabeto
     if (isLetra(code)) {
-        const letter = evento.key.toLowerCase();
+        const letter = event.key.toLowerCase();
         if (wrongLetters.includes(letter) || rightLetters.includes(letter)) {
             showWarningRepeatedLetter();
         } else {
@@ -97,8 +97,8 @@ function drawHangman() {
     }
 }
 
-function isLetra(codigo) {
-    return codigo >= 'A' && codigo <= 'z';
+function isLetra(input) {
+    return input >= 'a' && input <= 'z' || input === 'ç';
 }
 
 function reiniciarJogo() {
