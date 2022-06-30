@@ -3,6 +3,7 @@
     --pink: rgb(167, 63, 153);
     --black: #000;
     --blue: #2980b9;
+    --red: #a92112;
     --bgPopUp: rgba(0, 0, 0, 0.849);
 }
 
@@ -46,11 +47,18 @@ body {
 }
 
 .category { margin: 20px 0;}
-.category h2 { font-weight: 400; }
+.category h2 { font-weight: 400; margin: 0; }
 
 .field {max-width: 450px;}
 
-.repeated-letter h4 { font-weight: 400; margin: 20px 0; }
+.repeated-letter h4 { 
+    font-weight: 600; 
+    margin-bottom: 20px; 
+    background-color: var(--white);
+    color: var(--red);
+    border-radius: 4px;
+    padding: 8px;
+}
 
 .popup-container {
     background-color: var(--bgPopUp);
