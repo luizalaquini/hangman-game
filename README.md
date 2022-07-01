@@ -16,6 +16,7 @@ Alguns detalhes interessantes sobre a implementação:
 - O código suporta palavras simples e compostas separadas tanto por espaço quanto por hífen.
 - Não é necessário confirmar a escolha da letra.
 - O jogo exibe um aviso caso o usuário esteja tentando repetir uma letra.
+- O jogo exibe a 'categoria' da palavra a ser adivinhada.
 - Foi elaborado um campo especial para utilização em celular ou tablet.
 - Caso derrota, o jogo exibe qual era a palavra secreta.
 
