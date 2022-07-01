@@ -19,6 +19,7 @@ Alguns detalhes interessantes sobre a implementação:
 - O jogo exibe a 'categoria' da palavra a ser adivinhada.
 - Foi elaborado um campo especial para utilização em celular ou tablet.
 - Caso derrota, o jogo exibe qual era a palavra secreta.
+- Até o momento, o banco de palavras é um objeto local. Pode ser que eu venha a implemtentar um fetch de dados da web futuramente.
 
 ## Tecnologias Utilizadas
 - HTML 5
