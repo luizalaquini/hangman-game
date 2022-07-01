@@ -1,4 +1,4 @@
-# hangman-game-js
+# Hangman Game (Jogo da Forca) em Javascript
 ![GitHub](https://img.shields.io/github/license/luizalaquini/hangman-game-js)
 ![GitHub repo size](https://img.shields.io/github/repo-size/luizalaquini/hangman-game-js)
 ![GitHub language count](https://img.shields.io/github/languages/count/luizalaquini/hangman-game-js)
