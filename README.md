@@ -17,6 +17,7 @@ Alguns detalhes interessantes sobre a implementação:
 - Não é necessário confirmar a escolha da letra.
 - O jogo exibe um aviso caso o usuário esteja tentando repetir uma letra.
 - Foi elaborado um campo especial para utilização em celular ou tablet.
+- Caso derrota, o jogo exibe qual era a palavra secreta.
 
 ## Tecnologias Utilizadas
 - HTML 5
