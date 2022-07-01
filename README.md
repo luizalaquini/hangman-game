@@ -14,6 +14,7 @@ Jogo da Forca feito com Javascript, inspirado no projeto https://codesandbox.io/
 Alguns detalhes interessantes sobre a implementação:
 - As entradas aceitas são: letras maiúsculas e minúsculas (incluindo o caractere cidilha 'ç').
 - O código suporta palavras simples e compostas separadas tanto por espaço quanto por hífen.
+- O jogo ignora acentos nas palavras.
 - Não é necessário confirmar a escolha da letra.
 - O jogo exibe um aviso caso o usuário esteja tentando repetir uma letra.
 - O jogo exibe a 'categoria' da palavra a ser adivinhada.
