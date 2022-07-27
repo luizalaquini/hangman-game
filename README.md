@@ -1,8 +1,8 @@
 # Hangman Game (Jogo da Forca) em Javascript
-![GitHub](https://img.shields.io/github/license/luizalaquini/hangman-game-js)
-![GitHub repo size](https://img.shields.io/github/repo-size/luizalaquini/hangman-game-js)
-![GitHub language count](https://img.shields.io/github/languages/count/luizalaquini/hangman-game-js)
-![GitHub top language](https://img.shields.io/github/languages/top/luizalaquini/hangman-game-js)
+![GitHub](https://img.shields.io/github/license/luizalaquini/hangman-game)
+![GitHub repo size](https://img.shields.io/github/repo-size/luizalaquini/hangman-game)
+![GitHub language count](https://img.shields.io/github/languages/count/luizalaquini/hangman-game)
+![GitHub top language](https://img.shields.io/github/languages/top/luizalaquini/hangman-game)
 ![GitHub followers](https://img.shields.io/github/followers/luizalaquini?label=follow&style=social)
 
 Running Page: https://gentle-gelato-6d0e1f.netlify.app/
