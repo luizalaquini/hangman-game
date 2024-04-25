@@ -5,7 +5,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/luizalaquini/hangman-game)
 ![GitHub followers](https://img.shields.io/github/followers/luizalaquini?label=follow&style=social)
 
-Running Page: https://gentle-gelato-6d0e1f.netlify.app/
+[Jogue Aqui!](https://hangman-game-five-navy.vercel.app/)
 
 ## Sobre
 
