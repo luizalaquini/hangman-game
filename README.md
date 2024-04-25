@@ -5,7 +5,7 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/luizalaquini/hangman-game)
 ![GitHub followers](https://img.shields.io/github/followers/luizalaquini?label=follow&style=social)
 
-[Jogue Aqui!](https://hangman-game-five-navy.vercel.app/)
+[Jogue Aqui!](https://hangman-game-luizalaquini.vercel.app/)
 
 ## Sobre
 
